@@ -1,0 +1,109 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    /* width: 350px; */
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .header {
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .close-btn {
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #999;
+  }
+  
+  .header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .your-vehicles, .no-longer-in-use {
+    padding: 20px;
+  }
+  
+  h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .add-vehicle {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .vehicle-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .vehicle {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .car-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #999;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M488 144C456.5 99.5 408.3 64 352 64H160c-56.3 0-104.5 35.5-136 80c-33.1 40.2-33.1 94.1 0 134.3l192 240 192-240c33.1-40.2 33.1-94.1 0-134.3z' fill='%23999'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M488 144C456.5 99.5 408.3 64 352 64H160c-56.3 0-104.5 35.5-136 80c-33.1 40.2-33.1 94.1 0 134.3l192 240 192-240c33.1-40.2 33.1-94.1 0-134.3z' fill='%23999'/%3E%3C/svg%3E");
+    mask-size: cover;
+  }
+  
+  .name {
+    font-size: 16px;
+    color: #333;
+    flex-grow: 1;
+  }
+  
+  .primary {
+    background-color: #eee;
+    color: #999;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  .inactive {
+    opacity: 0.5;
+  }

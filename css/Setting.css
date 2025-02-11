@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header .back-arrow {
+  cursor: pointer;
+  font-size: 20px;
+}
+.header .menu-icon {
+  cursor: pointer;
+  font-size: 20px;
+}
+.menu-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1001;
+}
+.menu-dropdown a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+.menu-dropdown a:last-child {
+  border-bottom: none;
+}
+.menu-dropdown a:hover {
+  background: #f9f9f9;
+}
+.container {
+  max-width: 100%;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.section {
+  margin-bottom: 20px;
+}
+.section h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+.item:last-child {
+  border-bottom: none;
+}
+.item span {
+  font-size: 14px;
+  color: #555;
+}
+.toggle {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background: #ccc;
+  position: relative;
+  cursor: pointer;
+}
+.toggle:before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s;
+}
+.toggle.active {
+  background: blue;
+}
+.toggle.active:before {
+  left: 21px;
+}
+.sign-out {
+  display: block;
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px 0;
+  background: #d9534f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.sign-out:hover {
+  background: #c9302c;
+}
+  .popup {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.popup-content {
+background-color: white;
+padding: 20px;
+border-radius: 5px;
+text-align: center;
+}
+
+#close-popup {
+margin-top: 10px;
+padding: 5px 10px;
+cursor: pointer;
+}

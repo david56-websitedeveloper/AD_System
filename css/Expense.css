@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+
+  .expense-container {
+    max-width: 100%;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .save-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    width: auto;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  .amount-section,
+  .payment-method,
+  .account,
+  .date,
+  .payee,
+  .expense-type,
+  .tax,
+  .description,
+  .split,
+  .total,
+  .ref,
+  .message {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .payment-options button {
+    display: inline-block;
+    width: 30%;
+    margin-right: 5px;
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .payment-options button.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .split button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .footer {
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+}
+
+.footer button {
+  background: #008000;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* Add spacing between image and text */
+  padding: 10px 15px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.footer nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer nav button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: black;
+}
+.footer button img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer button:hover {
+  background-color: #0056b3;
+}
+
+  #split-container {
+    margin-top: 10px;
+  }
+
+  .split-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .split-item input {
+    flex: 1;
+  }
+
+  .split-item button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }

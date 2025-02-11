@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #e0eafc, #cfdef3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    color: #333;
+}
+
+.container {
+    background-color: white;
+    padding: 30px; /* Slightly reduced padding */
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    width: 95%; /* Wider default width */
+    max-width: 500px; /* Increased max-width */
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; /* Reduced gap */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 16px);
+    padding: 10px; /* Slightly reduced padding */
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 18px; /* Adjusted padding */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Added transform transition */
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.01); /* Reduced scale on hover */
+}
+
+.error {
+    color: #e74c3c;
+    margin-top: 8px; /* Reduced margin */
+    text-align: center;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #7f8c8d;
+    font-size: 16px; /* Slightly smaller eye icon */
+}
+
+.form-container {
+    transition: opacity 0.5s, transform 0.5s;
+    position: relative;
+    opacity: 1;
+    transform: none;
+    grid-column: 1 / -1;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-container header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container h1,
+.form-container h2 {
+    color: #3498db;
+}
+
+/* Media queries for different screen sizes */
+
+@media (min-width: 100px) and (max-width: 200px) { /* Small screens (phones) */
+    .container {
+        padding: 20px;
+        max-width: 95%; /* Use almost full width */
+        gap: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        padding: 8px;
+        margin-bottom: 12px;
+        font-size: 14px; /* Slightly smaller font */
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .toggle-password {
+        font-size: 14px;
+        right: 8px;
+    }
+    #forgot{
+        background-color: white;
+        color: blue;
+        
+        text-decoration: underline;
+    }
+
+    #create{
+        background-color: white;
+        color: blue;
+        
+        text-decoration: underline;
+    }
+ #Login{
+        background-color: black;
+        color: #e0eafc;
+    }
+}
+
+@media (min-width: 201px) and (max-width: 481px) { /* Medium screens (tablets) */
+    .container {
+        padding: 25px;
+        max-width: 90%;
+        gap: 18px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        padding: 10px 18px;
+    }
+    .toggle-password {
+        font-size: 15px;
+        right: 10px;
+    }
+    #forgot{
+        background-color: white;
+        color: blue;
+        
+        text-decoration: underline;
+    }
+
+    #create{
+        background-color: white;
+        color: blue;
+        
+        text-decoration: underline;
+    }
+ #Login{
+        background-color: black;
+        color: #e0eafc;
+    }
+}
+
+@media (min-width: 768px) { /* Larger screens (desktops) */
+    .container {
+        grid-template-columns: 1fr 1fr;
+        max-width: 800px;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .form-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        opacity: 0;
+        transform: rotateY(180deg);
+        pointer-events: none;
+    }
+
+    .login {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+/* Hover effects */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    transform: translateY(-1px); /* Reduced hover translate */
+}
+
+button:hover {
+    transform: scale(1.01); /* Reduced scale on hover */
+}

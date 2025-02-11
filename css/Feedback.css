@@ -1,0 +1,30 @@
+ /* Basic styles for demonstration */
+ .header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center the title */
+    align-items: center;
+    position: relative;
+}
+.back-arrow {
+    position: absolute; /* Position the arrow */
+    left: 10px;
+    cursor: pointer;
+}
+.feedback {
+    padding: 20px;
+}
+.feedback input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.send-feedback {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.send-feedback button {
+    padding: 10px 20px;
+}

@@ -1,0 +1,338 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  .dashboard {
+    max-width: 100%;
+    margin: auto;
+    background: #8a2424;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+
+/* Header Styling */
+.header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 15px 30px;
+          background: rgb(51, 51, 104);
+          color: white;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+          position: relative;
+      }
+      h1 {
+          font-size: 2rem;
+          text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8);
+          transition: transform 0.3s ease;
+      }
+      h1:hover {
+          transform: scale(1.1);
+      }
+      #profileImage {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+      }
+      /* #profileImage:hover {
+          transform: rotate(360deg) scale(1.2);
+      } */
+      #dropdownButton {
+          background: #ff5722;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          border-radius: 5px;
+          box-shadow: 0 4px 10px rgba(255, 87, 34, 0.6);
+          transition: background 0.3s, transform 0.3s;
+      }
+      #dropdownButton:hover {
+          background: #e64a19;
+          transform: scale(1.1);
+      }
+      .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 60px;
+          right: 30px;
+          background: white;
+          color: black;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          padding: 15px;
+          border-radius: 10px;
+          text-align: center;
+      }
+      .dropdown-menu a {
+          display: block;
+          text-decoration: none;
+          color: black;
+          padding: 10px 0;
+          transition: color 0.3s, text-shadow 0.3s;
+      }
+      .dropdown-menu a:hover {
+          color: #ff5722;
+          text-shadow: 2px 2px 10px rgba(255, 87, 34, 0.8);
+      }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+.header {
+  padding: 10px 15px;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.header h1 {
+  font-size: 18px;
+  margin-right: auto;
+}
+
+#username {
+  display: block;
+  margin-top: 5px;
+}
+
+.header img#profileImage {
+  width: 35px;
+  height: 35px;
+}
+
+.header button.xu {
+  padding: 8px;
+  font-size: 16px;
+}
+}
+
+@media screen and (max-width: 480px) {
+.header {
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 16px;
+  margin-right: 0;
+  text-align: center;
+}
+
+#username {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.header button.xu {
+  padding: 8px;
+  font-size: 14px;
+}
+}
+
+
+  
+  .battery {
+    font-size: 14px;
+    text-align: right;
+  }
+  
+  .actions {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    scroll-behavior: smooth;
+    gap: 15px;
+  }
+  
+  
+  .actions::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .actions::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+  
+  .action-item {
+    flex: 0 0 auto;
+    text-align: center;
+    cursor: pointer;
+    width: 120px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .action-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  .im {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .action-item span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+  }
+
+ 
+
+/* To-Do Section Styling */
+.to-do {
+  max-width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.to-do h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Individual To-Do Item Styling */
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.todo-item:hover {
+  background-color: #007bff; /* Background color on hover */
+  color: white;
+  transform: translateY(-5px);
+}
+
+.todo-item:hover img {
+  filter: none; /* Resetting the image filter effect */
+}
+
+.todo-item img.im {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+  transition: filter 0.3s ease;
+}
+
+.todo-item span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.todo-item:hover span {
+  color: white;
+}
+
+/* Paragraph Styling */
+.todo-item p {
+  font-size: 14px;
+  color: blue;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.todo-item p:hover{
+color: black;
+}
+
+
+
+  /* footer  */
+  .footer {
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+  }
+
+
+
+  .footer button {
+    background: #008000;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .footer nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer nav button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: black;
+  }
+
+  .footer button img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .footer button:hover {
+    background-color: #0056b3;
+  }
+
+  h2 {
+    margin-left: 40px;
+  }
+
+  #today {
+    background-color: aqua;
+  }
+
+/* eu  */
+.eu{
+color: #ddd;
+} 
+#pu{
+color:blue;
+background-color: #f5f5f5;
+}  
+
+#pu:hover{
+background-color: black;
+color: white;
+}
